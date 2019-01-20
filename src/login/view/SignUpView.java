@@ -1,5 +1,6 @@
 package login.view;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -7,6 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import login.controller.SignUpController;
 
 
 @SuppressWarnings("serial")
@@ -36,9 +39,16 @@ public class SignUpView extends JDialog {
 		jtfEmail2 = new JTextField();
 		jtfId = new JTextField();
 		jtfId = new JTextField();
-		jcbEmail = new JComboBox<String>();
 		jbSignUp = new JButton("회원가입");
 		jbCancel = new JButton("취소");
+		
+//		DefaultComboBoxModel<String> dlmEmail
+//			= new DefaultComboBoxModel<String>();
+//		dlmEmail.addElement("naver.com");
+		String[] mail = {"naver.com", "daum.net", "google.com","직접입력"};
+		jcbEmail = new JComboBox<String>(mail);
+		
+		
 		
 		
 		setLayout(null);
@@ -60,7 +70,7 @@ public class SignUpView extends JDialog {
 		jtfTel3.setBounds(260, 200, 50, 30);
 		jtfEmail1.setBounds(140, 240, 70, 30);
 		jtfEmail2.setBounds(235, 240, 70, 30);
-		jcbEmail.setBounds(320, 240, 80, 30);
+		jcbEmail.setBounds(320, 240, 90, 30);
 		
 		jlJoin.setBounds(160, 20, 150, 50);
 		jbSignUp.setBounds(100, 300, 100, 30);
@@ -81,9 +91,14 @@ public class SignUpView extends JDialog {
 		
 	setBounds(/*lv.getX()+*/100, /*lv.getY()+*/100, 450, 400);
 	setVisible(true);
-	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	//다이알로그 닫을 시엔 JFrame과 다르게  DISPOSE_ON_CLOSE로 닫는다.
 	//EXIT_ON_CLOSE아님
+	
+	SignUpController suc =new SignUpController(this);
+	addWindowListener(suc);
+	jbSignUp.addActionListener(suc);
+	jbCancel.addActionListener(suc);
 	
 	
 	

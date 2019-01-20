@@ -10,6 +10,7 @@ import java.awt.event.WindowEvent;
 
 import login.view.LoginView;
 import login.view.SignUpView;
+import login.view.UserView;
 
 public class LoginController extends WindowAdapter implements ActionListener,MouseListener {
 	
