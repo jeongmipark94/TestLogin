@@ -33,7 +33,7 @@ public class LoginController extends WindowAdapter implements ActionListener,Mou
 			//LoginVO로 로그인 인증 수행한 결과를 받는다.
 			
 			//로그인 성공시 UserView를 띄운다.
-//			new UserView();
+			new UserView();
 			
 			lv.dispose();
 			
