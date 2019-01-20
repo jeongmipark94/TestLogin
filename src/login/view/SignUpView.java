@@ -57,8 +57,8 @@ public class SignUpView extends JDialog {
 		jtfTel1.setBounds(150, 200, 40	, 30);
 		jtfTel2.setBounds(205, 200, 40, 30);
 		jtfTel3.setBounds(260, 200, 40, 30);
-		jtfEmail1.setBounds(150, 80, 150, 30);
-		jtfEmail2.setBounds(150, 80, 150, 30);
+		jtfEmail1.setBounds(150, 240, 70, 30);
+		jtfEmail2.setBounds(230, 240, 70, 30);
 		
 		jlJoin.setBounds(130, 20, 150, 50);
 		
