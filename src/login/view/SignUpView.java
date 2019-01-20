@@ -48,21 +48,24 @@ public class SignUpView extends JDialog {
 		add(new JLabel("비밀번호 확인")).setBounds(50, 160, 100, 30);
 		add(new JLabel("핸드폰")).setBounds(50, 200, 100, 30);
 		add(new JLabel("이메일")).setBounds(50, 240, 100, 30);
-		add(new JLabel("-")).setBounds(195, 208, 15, 15);
-		add(new JLabel("-")).setBounds(220, 208, 15, 15);
+		add(new JLabel("-")).setBounds(185, 208, 15, 15);
+		add(new JLabel("-")).setBounds(240, 208, 15, 15);
+		add(new JLabel("@")).setBounds(215, 245, 15, 15);
 		
-		jtfId.setBounds(150, 80, 150, 30);
-		jpfPw1.setBounds(150, 120, 150, 30);
-		jpfPw2.setBounds(150, 160, 150, 30);
-		jtfTel1.setBounds(150, 200, 40	, 30);
-		jtfTel2.setBounds(205, 200, 40, 30);
-		jtfTel3.setBounds(260, 200, 40, 30);
-		jtfEmail1.setBounds(150, 240, 70, 30);
-		jtfEmail2.setBounds(230, 240, 70, 30);
+		jtfId.setBounds(140, 80, 150, 30);
+		jpfPw1.setBounds(140, 120, 150, 30);
+		jpfPw2.setBounds(140, 160, 150, 30);
+		jtfTel1.setBounds(140, 200, 40	, 30);
+		jtfTel2.setBounds(195, 200, 40, 30);
+		jtfTel3.setBounds(250, 200, 40, 30);
+		jtfEmail1.setBounds(140, 240, 70, 30);
+		jtfEmail2.setBounds(235, 240, 70, 30);
+		jcbEmail.setBounds(300, 240, 80, 30);
 		
 		jlJoin.setBounds(130, 20, 150, 50);
 		
 		add(jlJoin);
+		add(jtfId);
 		add(jpfPw1);
 		add(jpfPw2);
 		add(jtfTel1);
@@ -70,6 +73,7 @@ public class SignUpView extends JDialog {
 		add(jtfTel3);
 		add(jtfEmail1);
 		add(jtfEmail2);
+		add(jcbEmail);
 		
 	setBounds(/*lv.getX()+*/100, /*lv.getY()+*/100, 400, 500);
 	setVisible(true);
