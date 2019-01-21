@@ -89,17 +89,17 @@ public class SignUpView extends JDialog {
 		add(jbSignUp);
 		add(jbCancel);
 		
+		SignUpController suc =new SignUpController(this);
+		addWindowListener(suc);
+		jbSignUp.addActionListener(suc);
+		jbCancel.addActionListener(suc);
+		
+		
 	setBounds(/*lv.getX()+*/100, /*lv.getY()+*/100, 450, 400);
-	setVisible(true);
+	setVisible(true);//창을 띄우기 전에 이벤트 처리 해줘야한다
 //	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	//다이알로그 닫을 시엔 JFrame과 다르게  DISPOSE_ON_CLOSE로 닫는다.
 	//EXIT_ON_CLOSE아님
-	
-	SignUpController suc =new SignUpController(this);
-	addWindowListener(suc);
-	jbSignUp.addActionListener(suc);
-	jbCancel.addActionListener(suc);
-	
 	
 	
 	}//생성자
